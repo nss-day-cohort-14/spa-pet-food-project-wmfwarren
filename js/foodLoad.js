@@ -24,11 +24,11 @@ function printDogFood () { //print the dog food object
 		<h3>Types and Pricing</h3>
 		`
 		for(let j = 0; j < dogFoods.dog_brands[i].types.length; j++){//second loop to print type of food
-				var currentFoodType = dogFoods.dog_brands[i].types[j].type;
-				currentFoodType = currentFoodType.replace(/_/, ' '); //replace underscore with space
-	
-				currentFoodType = currentFoodType.charAt(0).toUpperCase() + currentFoodType.slice(1); //make first char uppercase
-				
+			var currentFoodType = dogFoods.dog_brands[i].types[j].type;
+			currentFoodType = currentFoodType.replace(/_/, ' '); //replace underscore with space
+
+			currentFoodType = currentFoodType.charAt(0).toUpperCase() + currentFoodType.slice(1); //make first char uppercase
+			
 			dogPrintZone.innerHTML += `
 				<h4 class=typeOfFood">${currentFoodType}</h4>
 			`
@@ -66,11 +66,11 @@ function printCatFood () { //print the cat food object need second function beca
 		`
 		}
 		for(let l = 0; l < catFoods.cat_brands[i].types.length; l++ ){ //print the food types
-				var currentFoodType = catFoods.cat_brands[i].types[l].type;
-				currentFoodType = currentFoodType.replace(/_/, ' '); //replace underscore with space
-	
-				currentFoodType = currentFoodType.charAt(0).toUpperCase() + currentFoodType.slice(1); //make first char uppercase
-	
+			var currentFoodType = catFoods.cat_brands[i].types[l].type;
+			currentFoodType = currentFoodType.replace(/_/, ' '); //replace underscore with space
+
+			currentFoodType = currentFoodType.charAt(0).toUpperCase() + currentFoodType.slice(1); //make first char uppercase
+
 			catPrintZone.innerHTML += `
 				<h4 class=typeOfFood">${currentFoodType}</h4>
 			`
