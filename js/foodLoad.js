@@ -54,17 +54,17 @@ function printCatFood () { //print the cat food object need second function beca
 		<h2 class="brandName">${brandName}</h2>
 		<h3>Breeds, Types, and Pricing</h3>
 		`
-			for(let j = 0; j < catFoods.cat_brands[i].breeds.length; j++){//second loop to print breeds of cats
-			var currentFoodBreeds = catFoods.cat_brands[i].breeds[j];
-			currentFoodBreeds = currentFoodBreeds.replace(/_/, ' '); //replace underscore with space
+		for(let j = 0; j < catFoods.cat_brands[i].breeds.length; j++){//second loop to print breeds of cats
+		var currentFoodBreeds = catFoods.cat_brands[i].breeds[j];
+		currentFoodBreeds = currentFoodBreeds.replace(/_/, ' '); //replace underscore with space
 
-			currentFoodBreeds = currentFoodBreeds.charAt(0).toUpperCase() + currentFoodBreeds.slice(1); //make first char uppercase
-			
-			
-			catPrintZone.innerHTML += `
-				<h4 class=foodForBreed">${currentFoodBreeds}</h4>
-			`
-			}
+		currentFoodBreeds = currentFoodBreeds.charAt(0).toUpperCase() + currentFoodBreeds.slice(1); //make first char uppercase
+		
+		
+		catPrintZone.innerHTML += `
+			<h4 class=foodForBreed">${currentFoodBreeds}</h4>
+		`
+		}
 		for(let l = 0; l < catFoods.cat_brands[i].types.length; l++ ){ //print the food types
 				var currentFoodType = catFoods.cat_brands[i].types[l].type;
 				currentFoodType = currentFoodType.replace(/_/, ' '); //replace underscore with space
