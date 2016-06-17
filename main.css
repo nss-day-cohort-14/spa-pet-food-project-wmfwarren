@@ -1,0 +1,12 @@
+body {
+	text-align: center;
+}
+
+.header {
+	font-size: 2rem;
+	border: 1px black solid;
+}
+
+.brandName {
+	color: darkgreen;
+}

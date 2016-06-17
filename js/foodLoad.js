@@ -3,18 +3,21 @@ var requestCatFood = new XMLHttpRequest();
 var Foods = null;
 
 function loadFoodRequest (event) { //load the JSON
+	var PrintZone = document.getElementById("food");
 	Foods = JSON.parse(event.target.responseText);
+
+	PrintZone.innerHTML += `
+		<h1 class="header">Food</h1>`
 
 	printFood();
 }
 
 function printFood () { //print the  food object need second function because of breeds. 
 	var PrintZone = document.getElementById("food");
-	
+
 	for(let i = 0; i < Foods.brands.length; i++)	{//main loop for printing head info
 		var brandName = Foods.brands[i].name;
 		PrintZone.innerHTML += `
-		<h1>Food</h1>
 		<h2 class="brandName">${brandName}</h2>`;
 
 		if (Foods.brands[i].hasOwnProperty("breeds")) {
@@ -27,7 +30,7 @@ function printFood () { //print the  food object need second function because of
 				
 				
 				PrintZone.innerHTML += `
-					<h4 class=foodForBreed">${currentFoodBreeds}</h4>`;
+					<p class=foodForBreed">${currentFoodBreeds}</p>`;
 			}
 		}
 
