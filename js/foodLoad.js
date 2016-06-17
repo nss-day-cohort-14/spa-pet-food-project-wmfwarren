@@ -17,17 +17,17 @@ function printFood () { //print the  food object need second function because of
 		<h1>Food</h1>
 		<h2 class="brandName">${brandName}</h2>`;
 
-		if (Foods.brands[i].breeds.length !== undefined) {
-			PrintZone.innerHTML += `<h3>Breeds</h3>`;
+		if (Foods.brands[i].hasOwnProperty("breeds")) {
+			PrintZone.innerHTML += `<h3>Breeds of Cat</h3>`;
 			for(let j = 0; j < Foods.brands[i].breeds.length; j++){//second loop to print breeds of s
-			var currentFoodBreeds = Foods.brands[i].breeds[j];
-			currentFoodBreeds = currentFoodBreeds.replace(/_/, ' '); //replace underscore with space
+				var currentFoodBreeds = Foods.brands[i].breeds[j];
+				currentFoodBreeds = currentFoodBreeds.replace(/_/, ' '); //replace underscore with space
 
-			currentFoodBreeds = currentFoodBreeds.charAt(0).toUpperCase() + currentFoodBreeds.slice(1); //make first char uppercase
-			
-			
-			PrintZone.innerHTML += `
-				<h4 class=foodForBreed">${currentFoodBreeds}</h4>`;
+				currentFoodBreeds = currentFoodBreeds.charAt(0).toUpperCase() + currentFoodBreeds.slice(1); //make first char uppercase
+				
+				
+				PrintZone.innerHTML += `
+					<h4 class=foodForBreed">${currentFoodBreeds}</h4>`;
 			}
 		}
 
